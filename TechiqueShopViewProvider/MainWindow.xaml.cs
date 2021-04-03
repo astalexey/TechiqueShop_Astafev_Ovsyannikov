@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Unity;
 
 namespace TechiqueShopViewProvider
 {
@@ -20,9 +21,17 @@ namespace TechiqueShopViewProvider
     /// </summary>
     public partial class MainWindow : Window
     {
+        [Dependency]
+        public new IUnityContainer Container { get; set; }
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Provider(object sender, RoutedEventArgs e)
+        {
+            RegistrationForm form = Container.Resolve<RegistrationForm>();
+            form.Show();
         }
     }
 }

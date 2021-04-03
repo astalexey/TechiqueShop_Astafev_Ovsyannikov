@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TechiqueShopViewProvider"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Menu Height="25" VerticalAlignment="Top">
+            <MenuItem Header="Регистрация" Click="Button_Registration"></MenuItem>
+            <MenuItem Header="Комплектующие" ></MenuItem>
+            <MenuItem Header="View" ></MenuItem>
+        </Menu>
     </Grid>
 </Window>
